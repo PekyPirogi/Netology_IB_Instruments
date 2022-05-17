@@ -12,7 +12,7 @@ let post = Post(title: "Test title")
 class FeedViewController: UIViewController {
 
     override func viewDidLoad() {
-        
+        view.backgroundColor = .lightGray
         super.viewDidLoad()
         postButton()
 

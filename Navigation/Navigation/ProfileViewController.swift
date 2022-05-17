@@ -15,7 +15,7 @@ class ProfileViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.title = "Profile"
         view.backgroundColor = .lightGray
         viewWillLayoutSubviews()
 
@@ -23,7 +23,7 @@ class ProfileViewController: UIViewController {
     
     override func viewWillLayoutSubviews() {
         
-        profileHeaderVC.frame = view.safeAreaLayoutGuide.layoutFrame
+        profileHeaderVC.frame = view.frame
         view.addSubview(profileHeaderVC)
         
         
