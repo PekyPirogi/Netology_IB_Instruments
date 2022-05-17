@@ -8,6 +8,8 @@
 import UIKit
 
 class MainTabBarController: UITabBarController {
+    let feedVC = UINavigationController(rootViewController: FeedViewController())
+    let profileVC = UINavigationController(rootViewController: ProfileViewController())
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,8 +18,7 @@ class MainTabBarController: UITabBarController {
     }
     
     private func setupControllers() {
-        let feedVC = UINavigationController(rootViewController: FeedViewController())
-        let profileVC = UINavigationController(rootViewController: ProfileViewController())
+        
         
         feedVC.tabBarItem.title = "Feed"
         feedVC.tabBarItem.image = UIImage(systemName: "person.3.sequence.fill")

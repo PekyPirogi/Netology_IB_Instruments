@@ -8,8 +8,17 @@
 import Foundation
 import UIKit
 
+
 class ProfileHeaderView: UIView {
+
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        addElements()
+    }
     
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     let avatarView: UIView = {
         let avatar = UIImageView(image: UIImage(named: "Avatar"))
@@ -22,23 +31,23 @@ class ProfileHeaderView: UIView {
         return avatar
     }()
     
-   /* let headerView: UIView = {
-        let header = UITextView(frame: CGRect(x: 0, y: 27, width: 200, height: 18))
-        header.center = profileHeaderVC.center
-        header.backgroundColor = .gray
+    let headerView: UIView = {
+        let header = UILabel(frame: CGRect(x: 150, y: 27, width: 100, height: 20))
+        header.backgroundColor = .lightGray
+        header.textColor = .black
         header.font = UIFont.boldSystemFont(ofSize: 18)
         header.text = "Super Dog"
-        
+        //не смог понять как привязать к центру ProfileHeaderView, выставил вручную 
         return header
     }()
-    */
     
     func addElements() {
+        
         self.addSubview(avatarView)
-       // self.addSubview(headerView)
+        self.addSubview(headerView)
+        
     }
     
-
 }
     
 

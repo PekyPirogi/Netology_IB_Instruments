@@ -7,16 +7,18 @@
 
 import UIKit
 
-let profileHeaderVC = ProfileHeaderView()
+
 
 class ProfileViewController: UIViewController {
+    
+    let profileHeaderVC = ProfileHeaderView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         view.backgroundColor = .lightGray
         viewWillLayoutSubviews()
-        profileHeaderVC.addElements()
+
     }
     
     override func viewWillLayoutSubviews() {
